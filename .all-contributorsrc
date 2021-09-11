@@ -1,0 +1,28 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "Aniket762",
+      "name": "Aniket Pal",
+      "avatar_url": "https://avatars.githubusercontent.com/u/67703407?v=4",
+      "profile": "https://aniket.live",
+      "contributions": [
+        "code",
+        "doc",
+        "ideas",
+        "projectManagement",
+        "infra"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "donna",
+  "projectOwner": "betaoverflow",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
