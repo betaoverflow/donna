@@ -24,11 +24,7 @@ class _ProfilePageState extends State<ProfilePage> {
         children: [
           ProfileWidget(
             imagePath: user.imagePath,
-            onClicked: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(builder: (context) => EditProfilePage()),
-              );
-            },
+            //   onClicked: () {},
           ),
           const SizedBox(height: 24),
           buildName(user),
@@ -61,8 +57,12 @@ class _ProfilePageState extends State<ProfilePage> {
       );
 
   Widget buildUserButton() => ButtonWidget(
-        text: 'Button',
-        onClicked: () {},
+        text: 'Edit',
+        onClicked: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(builder: (context) => EditProfilePage()),
+          );
+        },
       );
 
   Widget buildAbout(User user) => Container(

@@ -26,7 +26,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                 ProfileWidget(
                   imagePath: user.imagePath,
                   isEdit: true,
-                  onClicked: () async {},
+                  //    onClicked: () async {},
                 ),
                 const SizedBox(height: 24),
                 TextFieldWidget(
