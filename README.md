@@ -1,16 +1,43 @@
-# donna
 
-A new Flutter project.
+<p align='center'></p>
+<h1 align='center'> Donna</h1>
+<p align='center'>
+ <br/> <br/>
+</strong>
+</p>
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## What is it? ⛹️‍♂️
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+[![Starware](https://img.shields.io/badge/⭐-Starware-f5a91a?labelColor=black)](https://github.com/zepfietje/starware)
+
+Donna is Starware.  
+This means you're free to use the project, as long as you star its GitHub repository.  
+Your appreciation makes us grow and glow up. ⭐
+
+## Team ✨
+
+
+
+
+
+## Challenges we ran into 🥺
+
+## Accomplishments that we're proud of 😎
+
+
+## What we learned 🤓
+
+
+## Built With 💕
+
+
+
+## What's next for Donna 🔥
+
+
+
+
+
