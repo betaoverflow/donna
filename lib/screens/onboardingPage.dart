@@ -89,7 +89,8 @@ class _OnboardingState extends State<Onboarding> {
             onPressed: () {
               if (currentIndex == onboardingContent.length - 1) {
                 Navigator.push(
-                    context, MaterialPageRoute(builder: (_) => LoginPage()));
+                    // context, MaterialPageRoute(builder: (_) => LoginPage()));
+                    context, MaterialPageRoute(builder: (_) => Home()));
               }
               _controller.nextPage(
                   duration: Duration(milliseconds: 100),
