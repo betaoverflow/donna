@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
+import 'package:donna/model/buttons.dart';
 
 class VoiceCard extends StatelessWidget {
   final FlutterTts flutterTts =FlutterTts();
-  final imageUrl, subtitle;
+  final imageUrl, subtitle, content;
   VoiceCard(
       {Key? key,
+      this.content="Hi",
       this.imageUrl = "assets/gradient-background-2.jpg",
       this.subtitle = "Bring me water"})
       : super(key: key);
@@ -13,7 +15,7 @@ class VoiceCard extends StatelessWidget {
   Widget build(BuildContext context) {
     speak() async{
       // await flutterTts.setVoice({"name": "Karen", "locale": "en-AU"});
-      await flutterTts.speak("Bring me water");
+      await flutterTts.speak(content);
     }
     return Padding(
       padding: EdgeInsets.only(top: 15),
