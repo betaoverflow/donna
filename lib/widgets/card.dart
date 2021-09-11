@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
-import 'package:donna/model/buttons.dart';
 
 class VoiceCard extends StatelessWidget {
   final FlutterTts flutterTts =FlutterTts();
@@ -14,7 +13,7 @@ class VoiceCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     speak() async{
-      // await flutterTts.setVoice({"name": "Karen", "locale": "en-AU"});
+      await flutterTts.setVoice({"name": "Karen", "locale": "en-AU"});
       await flutterTts.speak(content);
     }
     return Padding(

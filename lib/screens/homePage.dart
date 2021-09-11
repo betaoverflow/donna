@@ -1,8 +1,7 @@
 import 'package:donna/widgets/card.dart';
 import 'package:flutter/material.dart';
 import 'package:donna/model/categories.dart';
-
-List<String> subtitleArr = ["hello","bye","blah","bluh","zexxedce"];
+import 'package:donna/model/cardModel.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -92,9 +91,9 @@ class _HomePageState extends State<HomePage>
               controller: _tabController,
               children: List.generate(categories.length, (index) {
                 return ListView.builder(
-                  itemCount: subtitleArr.length,
+                  itemCount: cardContent.length,
                   itemBuilder: (context, index) {
-                    return VoiceCard(subtitle: subtitleArr[index],content: subtitleArr[index],);
+                    return VoiceCard(subtitle: cardContent[index].title,content: cardContent[index].category,);
                   },
                   padding: EdgeInsets.symmetric(horizontal: 25),
                 );
