@@ -1,5 +1,4 @@
-
-<p align='center'></p>
+<p align='center'><img src='https://github.com/betaoverflow/donna/blob/main/assets/Logo.png' width="200" ></p>
 <h1 align='center'> Donna</h1>
 <p align='center'>
  <br/> <br/>
