@@ -1,3 +1,4 @@
+import 'package:donna/widgets/dropdown.dart';
 import 'package:flutter/material.dart';
 
 import 'package:donna/widgets/textField.dart';
@@ -17,20 +18,18 @@ class _FormPageState extends State<FormPage> {
           children: [
             const SizedBox(height: 24),
             TextFieldWidget(
-              label: 'Select/Add Category',
+              label: 'Title',
               text: '',
               onChanged: (name) {},
             ),
             const SizedBox(height: 24),
             TextFieldWidget(
-              label: 'Command',
+              label: 'Content',
               text: '',
               onChanged: (name) {},
             ),
             const SizedBox(height: 24),
-            TextFormField(),
-            const SizedBox(height: 24),
-            TextFormField(),
+            DropDown(),
           ]),
     );
   }
