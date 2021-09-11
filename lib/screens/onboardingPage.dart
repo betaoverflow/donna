@@ -1,4 +1,5 @@
 import 'package:donna/model/onboardingModel.dart';
+import 'package:donna/screens/loginPage.dart';
 import 'package:flutter/material.dart';
 import 'package:donna/home.dart';
 
@@ -88,7 +89,7 @@ class _OnboardingState extends State<Onboarding> {
             onPressed: () {
               if (currentIndex == onboardingContent.length - 1) {
                 Navigator.push(
-                    context, MaterialPageRoute(builder: (_) => Home()));
+                    context, MaterialPageRoute(builder: (_) => LoginPage()));
               }
               _controller.nextPage(
                   duration: Duration(milliseconds: 100),
