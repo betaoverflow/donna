@@ -40,6 +40,16 @@
         "video",
         "talk"
       ]
+    },
+    {
+      "login": "Nirmal-C",
+      "name": "Nirmal-C",
+      "avatar_url": "https://avatars.githubusercontent.com/u/79088015?v=4",
+      "profile": "http://nirmalchathura.wordpress.com",
+      "contributions": [
+        "code",
+        "plugin"
+      ]
     }
   ],
   "contributorsPerLine": 7,
