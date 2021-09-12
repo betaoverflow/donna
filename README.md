@@ -46,8 +46,16 @@ Your appreciation makes us grow and glow up. ⭐
 ## What we learned 🤓
 
 
-## Built With 💕
-
+## Built With 💕 
+- [ ] Flutter
+- [ ] Dart
+- [ ] Firebase
+- [ ] Firestore
+- [ ] Cloudinary
+- [ ] Docker
+- [ ] Go lang
+- [ ] Redis
+- [ ] Text-to-Speech Converter
 
 
 ## What's next for Donna 🔥
