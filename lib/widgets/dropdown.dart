@@ -18,7 +18,7 @@ class _DropDownState extends State<DropDown> {
         padding: EdgeInsets.symmetric(horizontal: 12, vertical: 4),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
-          border: Border.all(color: Colors.black, width: 2),
+          border: Border.all(color: Colors.black, width: 1),
         ),
         child: DropdownButtonHideUnderline(
           child: DropdownButton<String>(
@@ -43,7 +43,7 @@ class _DropDownState extends State<DropDown> {
         value: item,
         child: Text(
           item,
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+          style: TextStyle(fontSize: 18),
         ),
       );
 }
