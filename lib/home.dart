@@ -24,7 +24,6 @@ class _HomeState extends State<Home> {
       currentIndex = index;
     });
   }
-
   final AuthService _auth = AuthService();
 
   @override

@@ -39,8 +39,6 @@ class FireStoreService {
         }
     );
 
-    // print(custom);
-
     return users
         .doc(user?.uid)
         .update({"commands": custom})
@@ -48,4 +46,7 @@ class FireStoreService {
         .catchError((error) => print("Failed to update user: $error"));
   }
 
+  Stream<DocumentSnapshot?> getUserData(){
+    return users.doc(user?.uid).snapshots();
+  }
 }
