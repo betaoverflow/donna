@@ -34,6 +34,13 @@ class _DropDownState extends State<DropDown> {
             isExpanded: true,
             items: items.map(buildMenuItem).toList(),
             onChanged: (value) => setState(() => this.value = value),
+            hint: Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                "Select Category",
+                style: TextStyle(color: Colors.grey),
+              ),
+            ),
           ),
         ));
   }
