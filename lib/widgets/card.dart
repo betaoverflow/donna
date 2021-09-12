@@ -49,7 +49,7 @@ class VoiceCard extends StatelessWidget {
                       child: Text(
                         subtitle,
                         style: TextStyle(
-                            fontSize: 36,
+                            fontSize: 46,
                             fontWeight: FontWeight.bold,
                             color: Colors.white),
                         maxLines: 4,
