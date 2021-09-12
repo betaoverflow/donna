@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "258100917162",
+    "project_id": "donna-421c1",
+    "storage_bucket": "donna-421c1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:258100917162:android:50f0f1add9415f4a8c71d3",
+        "android_client_info": {
+          "package_name": "com.example.donna"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "258100917162-22atlicg7gv6ml6j6ja7b58oie1t1q80.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhHfrzqoPKEbFKTsIxhMbt2p-FHyXWhh4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "258100917162-22atlicg7gv6ml6j6ja7b58oie1t1q80.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,11 +1,12 @@
-import 'package:animated_theme_switcher/animated_theme_switcher.dart';
-import 'package:donna/home.dart';
-import 'package:donna/screens/onboardingPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:donna/themes.dart';
 import 'package:donna/utils/userPreferences.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:provider/provider.dart';
+import 'package:donna/services/auth.dart';
+import 'package:donna/screens/basicLayout.dart';
+
+import 'model/UserAuth.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -30,30 +31,59 @@ class MyApp extends StatelessWidget {
       future: _initialization,
       builder: (context, snapshot) {
         // Check for errors
-        // if (snapshot.hasError) {
-        //   return SomethingWentWrong();
-        // }
+        if (snapshot.hasError) {
+          return SomethingWentWrong();
+        }
 
         // Once complete, show your application
         if (snapshot.connectionState == ConnectionState.done) {
-          return ThemeProvider(
-            initTheme: user.isDarkMode ? MyThemes.darkTheme : MyThemes.lightTheme,
-            child: Builder(
-              builder: (context) => MaterialApp(
-                debugShowCheckedModeBanner: false,
-                theme: ThemeProvider.of(context),
-                title: title,
-                home: Onboarding(),
-              ),
-            ),
+          return StreamProvider<UserAuth?>.value(
+            value: AuthService().user,
+            initialData: null,
+            child: BasicLayout(),
           );
         }
 
         // Otherwise, show something whilst waiting for initialization to complete
         // return Loading();
-        return Text("loading");
+        return Loading();
       },
     );
   }
 
+}
+
+
+class SomethingWentWrong extends StatelessWidget {
+  const SomethingWentWrong({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Container(
+          child: Center(
+            child: Text("something went wrong")
+          )
+        )
+      )
+    );
+  }
+}
+
+class Loading extends StatelessWidget {
+  const Loading({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+        home: Scaffold(
+            body: Container(
+                child: Center(
+                    child: CircularProgressIndicator()
+                )
+            )
+        )
+    );
+  }
 }
