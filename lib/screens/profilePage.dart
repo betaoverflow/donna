@@ -43,43 +43,67 @@ class _ProfilePageState extends State<ProfilePage> {
             user.name,
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
           ),
-          const SizedBox(height: 10),
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              primary: Colors.green.shade50,
-              shape: StadiumBorder(),
-              padding: EdgeInsets.fromLTRB(60, 20, 60, 20),
-            ),
-            onPressed: () {},
-            child: Text(
-              user.email,
-              style: TextStyle(color: Colors.black),
-            ),
-          ),
-          const SizedBox(height: 10),
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              primary: Colors.green.shade50,
-              shape: StadiumBorder(),
-              padding: EdgeInsets.fromLTRB(60, 20, 60, 20),
-            ),
-            onPressed: () {},
-            child: Text(
-              user.mobile,
-              style: TextStyle(color: Colors.black),
+          const SizedBox(height: 15),
+          SizedBox(
+            height: 40,
+            width: 300,
+            child: ElevatedButton(
+              style: ButtonStyle(
+                  backgroundColor:
+                      MaterialStateProperty.all(Colors.green.shade50),
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(18.0),
+                  ))),
+              child: Text(
+                user.email,
+                style: TextStyle(
+                  color: Colors.black,
+                ),
+              ),
+              onPressed: () {},
             ),
           ),
           const SizedBox(height: 10),
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              primary: Colors.green.shade50,
-              shape: StadiumBorder(),
-              padding: EdgeInsets.fromLTRB(60, 20, 60, 20),
+          SizedBox(
+            height: 40,
+            width: 300,
+            child: ElevatedButton(
+              style: ButtonStyle(
+                  backgroundColor:
+                      MaterialStateProperty.all(Colors.green.shade50),
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(18.0),
+                  ))),
+              child: Text(
+                user.mobile,
+                style: TextStyle(
+                  color: Colors.black,
+                ),
+              ),
+              onPressed: () {},
             ),
-            onPressed: () {},
-            child: Text(
-              user.address,
-              style: TextStyle(color: Colors.black),
+          ),
+          const SizedBox(height: 10),
+          SizedBox(
+            height: 40,
+            width: 300,
+            child: ElevatedButton(
+              style: ButtonStyle(
+                  backgroundColor:
+                      MaterialStateProperty.all(Colors.green.shade50),
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(18.0),
+                  ))),
+              child: Text(
+                user.address,
+                style: TextStyle(
+                  color: Colors.black,
+                ),
+              ),
+              onPressed: () {},
             ),
           ),
         ],
