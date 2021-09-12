@@ -64,6 +64,6 @@ class _EditProfilePageState extends State<EditProfilePage> {
 }
 
 Widget buildUserButton() => ButtonWidget(
-      text: 'Save',
+      text: 'SAVE',
       onClicked: () {},
     );

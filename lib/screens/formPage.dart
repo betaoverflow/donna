@@ -66,7 +66,7 @@ class _FormPageState extends State<FormPage> {
             ),
             const SizedBox(height: 10),
             DropDown(),
-            const SizedBox(height: 20),
+            const SizedBox(height: 40),
             TextButton(
               onPressed: () async {
                 await firestore.updateCommands(

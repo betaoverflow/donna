@@ -57,7 +57,7 @@ class _ProfilePageState extends State<ProfilePage> {
       );
 
   Widget buildUserButton() => ButtonWidget(
-        text: 'Edit',
+        text: 'EDIT',
         onClicked: () {
           Navigator.of(context).push(
             MaterialPageRoute(builder: (context) => EditProfilePage()),
