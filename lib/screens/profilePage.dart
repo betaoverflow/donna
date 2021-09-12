@@ -30,7 +30,7 @@ class _ProfilePageState extends State<ProfilePage> {
           buildName(user),
           const SizedBox(height: 50),
           buildAbout(user),
-          const SizedBox(height: 100),
+          const SizedBox(height: 130),
           Center(child: buildUserButton()),
         ],
       ),

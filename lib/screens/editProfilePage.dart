@@ -5,6 +5,7 @@ import 'package:donna/utils/userPreferences.dart';
 import 'package:donna/widgets/appbar.dart';
 import 'package:donna/widgets/profile.dart';
 import 'package:donna/widgets/textField.dart';
+import 'package:donna/widgets/button.dart';
 
 class EditProfilePage extends StatefulWidget {
   @override
@@ -53,9 +54,16 @@ class _EditProfilePageState extends State<EditProfilePage> {
                   maxLines: 5,
                   onChanged: (about) {},
                 ),
+                const SizedBox(height: 35),
+                Center(child: buildUserButton()),
               ],
             ),
           ),
         ),
       );
 }
+
+Widget buildUserButton() => ButtonWidget(
+      text: 'Save',
+      onClicked: () {},
+    );
