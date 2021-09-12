@@ -41,7 +41,9 @@ Your appreciation makes us grow and glow up. ⭐
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-
+## How we built it 🧑‍💻
+We used flutter to build the app and Firebase as our backend service for authentication and database. We used a flutter package to convert text to speech. 
+We added the feature in which the users can create personalized voice cards (a card on clicking which converts the text to speech) through a form. These custom cards are stored in the database for user convenience and are available upon login.
 
 ## Challenges we ran into 🥺
 We faced numerous challenges throughout the journey. Firstly, being a group of javascript developers this was our first try at Flutter. Us being super ambitious decided to try Go and Redis for the backend and database respectively and were stuck in it for a long time as we had never worked on them. Then finally we decided to change our platform and use Firestore and Firebase along with Flutter. Apart from that, we had to look for a good text to speech conversion model. We checked so many GitHub repositories and packages but we couldn't find one that had very high efficiency. So we finally decided to go with the flutter_tts package. Lastly, due to the time constraints, there were some features initially planned which we were not able to complete but would surely work on it after the hackathon.
