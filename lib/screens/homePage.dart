@@ -81,15 +81,13 @@ class _HomePageState extends State<HomePage>
 
         var commands = snapshot.data!.get("commands");
         if (commands != null) {
-          var personalizedCommands = commands["personalized"];
-          if (personalizedCommands != null) {
-            personalizedCommands.forEach((c) {
-              // print(c);
-              cardContentWithPersonalCategory.add(
-                CardModel(title: c["title"], content: c["content"], category: categories[4].name)
-              );
-            });
-          }
+          commands.forEach((c) {
+            print(c);
+            cardContentWithPersonalCategory.add(CardModel(
+                title: c["title"],
+                content: c["content"],
+                category: categories[4].name));
+          });
         }
 
         return NestedScrollView(

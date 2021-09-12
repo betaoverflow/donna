@@ -29,12 +29,12 @@ class FireStoreService {
         (snapshot) {
           custom = snapshot.get("commands");
 
-          // print(custom["personalized"]);
-          if(custom["personalized"] == null) {
-            custom["personalized"] = [{"title": title, "content": content}];
+          print(custom);
+          if(custom == null) {
+            custom = [{"title": title, "content": content}];
             // print(custom["personalized"]);
           } else {
-            custom["personalized"].add({"title": title, "content": content});
+            custom.add({"title": title, "content": content});
           }
         }
     );
