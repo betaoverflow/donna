@@ -171,3 +171,5 @@ List<CardModel> cardContent = [
           'https://cdn.dribbble.com/users/623359/screenshots/14149713/media/0f162f3f291fa31fc734534b408d73a8.png',
       category: "Health"),
 ];
+
+List<CardModel> cardContentWithPersonalCategory = [];
