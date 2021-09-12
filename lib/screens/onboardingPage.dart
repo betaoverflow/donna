@@ -30,83 +30,86 @@ class _OnboardingState extends State<Onboarding> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.green.shade50,
         body: Column(
-      children: [
-        Expanded(
-          child: PageView.builder(
-            controller: _controller,
-            itemCount: onboardingContent.length,
-            onPageChanged: (int index) {
-              setState(() {
-                currentIndex = index;
-              });
-            },
-            itemBuilder: (_, i) {
-              return Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: Column(
-                  children: [
-                    Image.network(
-                      onboardingContent[i].image,
-                      height: 400,
+          children: [
+            Expanded(
+              child: PageView.builder(
+                controller: _controller,
+                itemCount: onboardingContent.length,
+                onPageChanged: (int index) {
+                  setState(() {
+                    currentIndex = index;
+                  });
+                },
+                itemBuilder: (_, i) {
+                  return Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Column(
+                      children: [
+                        Image.network(
+                          onboardingContent[i].image,
+                          height: 400,
+                        ),
+                        Text(
+                          onboardingContent[i].title,
+                          style: TextStyle(
+                              fontSize: 35, fontWeight: FontWeight.bold),
+                        ),
+                        SizedBox(height: 20),
+                        Text(
+                          onboardingContent[i].descp,
+                          textAlign: TextAlign.center,
+                          style: TextStyle(fontSize: 18, color: Colors.grey),
+                        )
+                      ],
                     ),
-                    Text(
-                      onboardingContent[i].title,
-                      style:
-                          TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
-                    ),
-                    SizedBox(height: 20),
-                    Text(
-                      onboardingContent[i].descp,
-                      textAlign: TextAlign.center,
-                      style: TextStyle(fontSize: 18, color: Colors.grey),
-                    )
-                  ],
-                ),
-              );
-            },
-          ),
-        ),
-        Container(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: List.generate(
-                onboardingContent.length, (index) => dots(index, context)),
-          ),
-        ),
-        Container(
-          margin: EdgeInsets.all(50),
-          width: double.infinity,
-          height: (50),
-          child: ElevatedButton(
-            onPressed: () {
-              if (currentIndex == onboardingContent.length - 1) {
-                Navigator.push(
-                    // context, MaterialPageRoute(builder: (_) => LoginPage()));
-                    context,
-                    MaterialPageRoute(builder: (_) => SignupPage()));
-              }
-              _controller.nextPage(
-                  duration: Duration(milliseconds: 100),
-                  curve: Curves.bounceIn);
-            },
-            style: (ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(Colors.green),
-                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                    RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20.0),
-                )))),
-            child: Text(
-              currentIndex == onboardingContent.length - 1 ? 'Done' : 'Next',
-              style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 16),
+                  );
+                },
+              ),
             ),
-          ),
-        ),
-      ],
-    ));
+            Container(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: List.generate(
+                    onboardingContent.length, (index) => dots(index, context)),
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.all(50),
+              width: double.infinity,
+              height: (50),
+              child: ElevatedButton(
+                onPressed: () {
+                  if (currentIndex == onboardingContent.length - 1) {
+                    Navigator.push(
+                        // context, MaterialPageRoute(builder: (_) => LoginPage()));
+                        context,
+                        MaterialPageRoute(builder: (_) => SignupPage()));
+                  }
+                  _controller.nextPage(
+                      duration: Duration(milliseconds: 100),
+                      curve: Curves.bounceIn);
+                },
+                style: (ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.green),
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0),
+                    )))),
+                child: Text(
+                  currentIndex == onboardingContent.length - 1
+                      ? 'Done'
+                      : 'Next',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16),
+                ),
+              ),
+            ),
+          ],
+        ));
   }
 
   Container dots(int index, BuildContext context) {
