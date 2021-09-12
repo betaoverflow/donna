@@ -75,17 +75,26 @@ class _OnboardingState extends State<Onboarding> {
           ),
         ),
         Container(
-          height: 60,
           margin: EdgeInsets.all(40),
           width: double.infinity,
-          color: Theme.of(context).primaryColor,
+          color: Colors.green,
           child: TextButton(
-            child: Text(
-              currentIndex == onboardingContent.length - 1 ? 'Done' : 'Next',
-              style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 16),
+            child: Container(
+              child: Material(
+                borderRadius: BorderRadius.circular(20.0),
+                shadowColor: Colors.greenAccent,
+                color: Colors.green,
+                elevation: 7.0,
+                child: Text(
+                  currentIndex == onboardingContent.length - 1
+                      ? 'Done'
+                      : 'Next',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16),
+                ),
+              ),
             ),
             onPressed: () {
               if (currentIndex == onboardingContent.length - 1) {
@@ -111,9 +120,7 @@ class _OnboardingState extends State<Onboarding> {
       margin: EdgeInsets.only(right: 5),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
-          color: currentIndex == index
-              ? Colors.black
-              : Theme.of(context).primaryColor),
+          color: currentIndex == index ? Colors.green : Colors.greenAccent),
     );
   }
 }
