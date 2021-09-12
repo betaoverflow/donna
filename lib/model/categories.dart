@@ -4,8 +4,9 @@ class CategoryModel {
 }
 
 List<CategoryModel> categories = [
-  CategoryModel(name: "Category1"),
-  CategoryModel(name: 'Category2'),
-  CategoryModel(name: 'Category3'),
-  CategoryModel(name: 'Category4')
+  CategoryModel(name: "General"),
+  CategoryModel(name: 'Food'),
+  CategoryModel(name: 'Movements'),
+  CategoryModel(name: 'Health'),
+  CategoryModel(name: 'Personalized')
 ];

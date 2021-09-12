@@ -1,28 +1,31 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 
 class VoiceCard extends StatelessWidget {
-  final FlutterTts flutterTts =FlutterTts();
+  final FlutterTts flutterTts = FlutterTts();
   final imageUrl, subtitle, content;
   VoiceCard(
       {Key? key,
-      this.content="Hi",
-      this.imageUrl = "assets/gradient-background-2.jpg",
+      this.content = "Hi",
+      this.imageUrl = "assets/cardbg.png",
       this.subtitle = "Bring me water"})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
-    speak() async{
+    speak() async {
       await flutterTts.setVoice({"name": "Karen", "locale": "en-AU"});
       await flutterTts.speak(content);
     }
+
     return Padding(
       padding: EdgeInsets.only(top: 15),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           InkWell(
-            onTap: ()=>speak(),
+            onTap: () => speak(),
             child: Container(
               height: 203,
               width: MediaQuery.of(context).size.width,
@@ -45,7 +48,10 @@ class VoiceCard extends StatelessWidget {
                       padding: EdgeInsets.fromLTRB(30, 0, 10, 0),
                       child: Text(
                         subtitle,
-                        style: TextStyle(fontSize: 36, color: Colors.white),
+                        style: TextStyle(
+                            fontSize: 36,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
                         maxLines: 4,
                         overflow: TextOverflow.fade,
                       ),
