@@ -10,13 +10,7 @@ class DropDown extends StatefulWidget {
 }
 
 class _DropDownState extends State<DropDown> {
-  final items = [
-    'Category 1',
-    'Category 2',
-    'Category 3',
-    'Category 4',
-    'Category 5'
-  ];
+  final items = ['General', 'Food', 'Movements', 'Health', 'Personalized'];
   String? value;
   @override
   Widget build(BuildContext context) {

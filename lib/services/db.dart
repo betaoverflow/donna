@@ -1,7 +1,4 @@
-import 'dart:ffi';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:provider/provider.dart';
 import 'package:donna/model/UserAuth.dart';
 
 class FireStoreService {
@@ -25,14 +22,33 @@ class FireStoreService {
         .catchError((error) => print("Failed to add user: $error"));
   }
 
+  Future<void> updateCommands(String category, String title, String content) async {
+    var custom;
+    await users.doc(user?.uid).get().then(
+        (snapshot) {
+          custom = snapshot.get("commands");
 
-  // Future<void> addUsers(String category, String title, String text) async {
-  //   // DocumentSnapshot snapshot = await users.doc(user?.uid).get();
-  //   return users
-  //       .doc(user?.uid)
-  //       .update()
-  //       .then((value) => print("User Updated"))
-  //       .catchError((error) => print("Failed to update user: $error"));
-  // }
+          print(custom[category]);
+          custom[category].add({"title": title, "content": content});
+        }
+    );
+
+
+    // var testCommand = {
+    //   "food_and_drinks": [
+    //     {"title": 'Water', "content": "I need water"},
+    //     {"title": "Pizza", "content" : "I need pizza"},
+    //   ],
+    //   "health": [
+    //     "I am not feeling well"
+    //   ]
+    // };
+    //
+    return users
+        .doc(user?.uid)
+        .update({"commands": custom})
+        .then((value) => print("User Updated"))
+        .catchError((error) => print("Failed to update user: $error"));
+  }
 
 }
