@@ -1,8 +1,6 @@
 import 'package:donna/services/db.dart';
 import 'package:donna/widgets/dropdown.dart';
 import 'package:flutter/material.dart';
-import 'package:donna/widgets/button.dart';
-import 'package:donna/widgets/textField.dart';
 import 'package:provider/provider.dart';
 import 'package:donna/model/UserAuth.dart';
 
@@ -12,6 +10,15 @@ class FormPage extends StatefulWidget {
 }
 
 class _FormPageState extends State<FormPage> {
+  final TextEditingController _title = TextEditingController();
+  final TextEditingController _content = TextEditingController();
+
+  @override
+  void dispose() {
+    _title.dispose();
+    _content.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -25,27 +32,38 @@ class _FormPageState extends State<FormPage> {
           physics: BouncingScrollPhysics(),
           children: [
             const SizedBox(height: 24),
-            TextFieldWidget(
-              label: 'Title',
-              text: '',
-              onChanged: (name) {},
+            TextField(
+              controller: _title,
+              decoration: InputDecoration(
+                  labelText: 'TITLE ',
+                  labelStyle: TextStyle(
+                      fontFamily: 'Montserrat',
+                      fontWeight: FontWeight.bold,
+                      color: Colors.grey),
+                  focusedBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: Colors.green))),
             ),
             const SizedBox(height: 24),
-            TextFieldWidget(
-              label: 'Content',
-              text: '',
-              onChanged: (name) {},
+            TextField(
+              controller: _content,
+              decoration: InputDecoration(
+                  labelText: 'DESCRIPTION ',
+                  labelStyle: TextStyle(
+                      fontFamily: 'Montserrat',
+                      fontWeight: FontWeight.bold,
+                      color: Colors.grey),
+                  focusedBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: Colors.green))),
             ),
             const SizedBox(height: 50),
             DropDown(),
             const SizedBox(height: 270),
             ElevatedButton(
                 onPressed: () async {
-                  await firestore.updateCommands("food_and_drinks", "Pasta", "I need pasta");
+                  await firestore.updateCommands(_title.text, _content.text);
                 },
                 child: Text("Submit")),
           ]),
-
     );
   }
 }
