@@ -40,24 +40,42 @@ class _HomeState extends State<Home> {
             DrawerHeader(
                 child: Container(
               width: MediaQuery.of(context).size.width,
-              child: Image.asset("assets/profile.png"),
+              child: Image.asset("assets/circularLogo.png"),
             )),
-            SizedBox(height: 45),
-            Text(
-              'Home',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
+            SizedBox(height: 25),
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => Home()));
+              },
+              child: Text(
+                'Home',
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
+              ),
             ),
-            SizedBox(height: 45),
-            Text(
-              'Profile',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
+            SizedBox(height: 25),
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => ProfilePage()));
+              },
+              child: Text(
+                'Profile',
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
+              ),
             ),
-            SizedBox(height: 45),
-            Text(
-              'Form',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
+            SizedBox(height: 25),
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => Home()));
+              },
+              child: Text(
+                'Form',
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
+              ),
             ),
-            SizedBox(height: 45),
+            SizedBox(height: 25),
             TextButton(
               child: Text('Logout',
                   style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600)),
@@ -65,7 +83,7 @@ class _HomeState extends State<Home> {
                 await _auth.signOut();
               },
             ),
-            SizedBox(height: 45),
+            SizedBox(height: 25),
             Material(
               borderRadius: BorderRadius.circular(500),
               child: InkWell(

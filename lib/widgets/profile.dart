@@ -3,13 +3,11 @@ import 'package:flutter/material.dart';
 class ProfileWidget extends StatelessWidget {
   final String imagePath;
   final bool isEdit;
-  // final VoidCallback onClicked;
 
   const ProfileWidget({
     Key? key,
     required this.imagePath,
     this.isEdit = false,
-    //required this.onClicked,
   }) : super(key: key);
 
   @override
@@ -41,7 +39,6 @@ class ProfileWidget extends StatelessWidget {
           fit: BoxFit.cover,
           width: 128,
           height: 128,
-          //    child: InkWell(onTap: onClicked),
         ),
       ),
     );

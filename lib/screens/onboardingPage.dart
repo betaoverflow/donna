@@ -47,11 +47,13 @@ class _OnboardingState extends State<Onboarding> {
                     padding: const EdgeInsets.all(10.0),
                     child: Column(
                       children: [
+                        SizedBox(height: 130),
                         Image.network(
                           onboardingContent[i].image,
-                          height: 400,
+                          height: 250,
                           width: 300,
                         ),
+                        SizedBox(height: 20),
                         Text(
                           onboardingContent[i].title,
                           style: TextStyle(

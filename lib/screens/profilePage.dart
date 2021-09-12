@@ -28,9 +28,9 @@ class _ProfilePageState extends State<ProfilePage> {
           ),
           const SizedBox(height: 24),
           buildName(user),
-          const SizedBox(height: 50),
+          const SizedBox(height: 40),
           buildAbout(user),
-          const SizedBox(height: 50),
+          const SizedBox(height: 40),
           Center(child: buildUserButton()),
         ],
       ),
@@ -43,43 +43,82 @@ class _ProfilePageState extends State<ProfilePage> {
             user.name,
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
           ),
-          const SizedBox(height: 10),
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              primary: Colors.green.shade50,
-              shape: StadiumBorder(),
-              padding: EdgeInsets.fromLTRB(60, 20, 60, 20),
-            ),
-            onPressed: () {},
-            child: Text(
-              user.email,
-              style: TextStyle(color: Colors.black),
+          const SizedBox(height: 15),
+          SizedBox(
+            height: 40,
+            width: 300,
+            child: TextButton.icon(
+              style: TextButton.styleFrom(
+                textStyle:
+                    TextStyle(color: Colors.green, fontWeight: FontWeight.w500),
+                backgroundColor: Colors.green.shade50,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(24.0),
+                ),
+              ),
+              onPressed: () => {},
+              icon: Icon(
+                Icons.email_outlined,
+                color: Colors.green,
+              ),
+              label: Text(
+                user.email,
+                style: TextStyle(
+                  color: Colors.black,
+                ),
+              ),
             ),
           ),
           const SizedBox(height: 10),
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              primary: Colors.green.shade50,
-              shape: StadiumBorder(),
-              padding: EdgeInsets.fromLTRB(60, 20, 60, 20),
-            ),
-            onPressed: () {},
-            child: Text(
-              user.mobile,
-              style: TextStyle(color: Colors.black),
+          SizedBox(
+            height: 40,
+            width: 300,
+            child: TextButton.icon(
+              style: TextButton.styleFrom(
+                textStyle:
+                    TextStyle(color: Colors.green, fontWeight: FontWeight.w500),
+                backgroundColor: Colors.green.shade50,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(24.0),
+                ),
+              ),
+              onPressed: () => {},
+              icon: Icon(
+                Icons.phone_outlined,
+                color: Colors.green,
+              ),
+              label: Text(
+                user.mobile,
+                style: TextStyle(
+                  color: Colors.black,
+                ),
+              ),
             ),
           ),
           const SizedBox(height: 10),
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              primary: Colors.green.shade50,
-              shape: StadiumBorder(),
-              padding: EdgeInsets.fromLTRB(60, 20, 60, 20),
-            ),
-            onPressed: () {},
-            child: Text(
-              user.address,
-              style: TextStyle(color: Colors.black),
+          SizedBox(
+            height: 40,
+            width: 300,
+            child: TextButton.icon(
+              style: TextButton.styleFrom(
+                textStyle:
+                    TextStyle(color: Colors.green, fontWeight: FontWeight.w500),
+                backgroundColor: Colors.green.shade50,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(24.0),
+                ),
+              ),
+              onPressed: () => {},
+              icon: Icon(
+                Icons.home_outlined,
+                color: Colors.green,
+              ),
+              label: Text(
+                user.address,
+                style: TextStyle(
+                  color: Colors.black,
+                ),
+              ),
             ),
           ),
         ],
