@@ -54,7 +54,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                   maxLines: 5,
                   onChanged: (about) {},
                 ),
-                const SizedBox(height: 40),
+                const SizedBox(height: 35),
                 Center(child: buildUserButton()),
               ],
             ),
