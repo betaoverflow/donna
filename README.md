@@ -48,7 +48,7 @@ We faced numerous challenges throughout the journey. Firstly, being a group of j
 Firstly, we were able to learn so much in just one day including an entire tech stack i.e. app development using Flutter. Along with that we made a lot of features that we didn't even think would be possible to do and we had so much fun creating them. But most importantly, we understand the struggle specially-abled people face in their day-to-day activities and we feel this app might be able to make their life a bit simpler. And this is our biggest achievement. It feels great creating something which can actually help someone and make an impact on someone's life.
 
 ## What we learned 🤓
-
+Being a group of javascript developers, we tried our hands on Flutter this time. We learnt how to create an onboarding screen, proper navigation, optimize controllers and make API calls. Although we were not able to successfully use Go in the backend we did get to learn about how to create modules and contexts in Go. Finally, we learnt how to connect Flutter with Firebase and use it for authentication and real-time data manipulation.
 
 ## Built With 💕 
 - [ ] Flutter
@@ -63,7 +63,7 @@ Firstly, we were able to learn so much in just one day including an entire tech 
 
 
 ## What's next for Donna 🔥
-
+Next, we want to add more and more categories and functionalities in the app to try and put all the phrases that might be required in day-to-day activities. We also wish to add hospital support and on-call emergency services in the future. In addition to that, we want to make sure, we take of their mental health as well, so we would also be adding a mood tracker which tracks a person's happiness index every day and helps them make the graph go up!
 
 
 
