@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:donna/home.dart';
 import 'package:provider/provider.dart';
 import 'package:donna/screens/authenticate.dart';
+import 'package:donna/screens/db/addUser.dart';
 
 class Wrapper extends StatelessWidget {
   const Wrapper({Key? key}) : super(key: key);
@@ -14,7 +15,7 @@ class Wrapper extends StatelessWidget {
     if(user == null) {
       return Authenticate();
     } else {
-      return Home();
+      return AddUser("John Cena", "Google", 12);
     }
 
   }
