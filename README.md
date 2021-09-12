@@ -42,7 +42,7 @@ Your appreciation makes us grow and glow up. ⭐
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 ## Instructions 👨‍💻
 ### test email and password
-email: aabhassao0@gmail.com
+email: aabhassao0@gmail.com \
 password: abc456
 
 ## How we built it 🧑‍💻
