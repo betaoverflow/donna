@@ -9,7 +9,7 @@ class UserPreferences {
     mobile: '+91 1234567890',
     address: '333 Bay Street, Toronto',
     about:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
+        'Donna Roberta Paulsen is the former Chief Operating Officer of Specter Litt Wheeler Williams and the wife of Harvey Specter, having originally worked as his legal secretary for over twelve years.',
     isDarkMode: false,
   );
 }
