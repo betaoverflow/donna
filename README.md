@@ -40,6 +40,10 @@ Your appreciation makes us grow and glow up. ⭐
 <!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
+## Instructions 👨‍💻
+### test email and password
+email: aabhassao0@gmail.com
+password: abc456
 
 ## How we built it 🧑‍💻
 We used flutter to build the app and Firebase as our backend service for authentication and database. We used a flutter package to convert text to speech. 
