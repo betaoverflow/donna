@@ -105,14 +105,14 @@ class _HomeState extends State<Home> {
       //according to index pages shown
       body: <Widget>[HomePage(), FormPage(), ProfilePage()][currentIndex],
       bottomNavigationBar: BubbleBottomBar(
-        opacity: 0.2,
+        opacity: 0.1,
         currentIndex: currentIndex,
         onTap: changePage,
         borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
         elevation: 8,
         items: <BubbleBottomBarItem>[
           BubbleBottomBarItem(
-              backgroundColor: Colors.red,
+              backgroundColor: Colors.green,
               icon: Icon(
                 Icons.home,
                 color: Colors.black,
@@ -134,7 +134,7 @@ class _HomeState extends State<Home> {
               ),
               title: Text("Form")),
           BubbleBottomBarItem(
-              backgroundColor: Colors.purple,
+              backgroundColor: Colors.green,
               icon: Icon(
                 Icons.person,
                 color: Colors.black,

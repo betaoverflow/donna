@@ -49,24 +49,8 @@ class _HomePageState extends State<HomePage>
         headerSliverBuilder: (context, value) {
           return [
             SliverToBoxAdapter(
-              child: Padding(
-                padding: EdgeInsets.fromLTRB(25, 10, 25, 25),
-                child: Align(
-                  alignment: Alignment.center,
-                  child: Text(
-                    "Building the future",
-                    style: TextStyle(
-                        // fontFamily: "Times",
-                        fontSize: 30,
-                        fontWeight: FontWeight.w700),
-                    textAlign: TextAlign.left,
-                  ),
-                ),
-              ),
-            ),
-            SliverToBoxAdapter(
               child: Container(
-                padding: EdgeInsets.only(left: 15),
+                padding: EdgeInsets.only(left: 15, top: 10),
                 alignment: Alignment.centerLeft,
                 child: TabBar(
                     labelPadding: EdgeInsets.only(right: 15),
@@ -93,7 +77,10 @@ class _HomePageState extends State<HomePage>
                 return ListView.builder(
                   itemCount: cardContent.length,
                   itemBuilder: (context, index) {
-                    return VoiceCard(subtitle: cardContent[index].title,content: cardContent[index].category,);
+                    return VoiceCard(
+                      subtitle: cardContent[index].title,
+                      content: cardContent[index].category,
+                    );
                   },
                   padding: EdgeInsets.symmetric(horizontal: 25),
                 );
