@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:bubble_bottom_bar/bubble_bottom_bar.dart';
 
@@ -6,6 +7,7 @@ import 'package:bubble_bottom_bar/bubble_bottom_bar.dart';
 import 'package:donna/screens/homePage.dart';
 import 'package:donna/screens/formpage.dart';
 import 'package:donna/screens/profilePage.dart';
+import 'package:donna/services/auth.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -22,6 +24,8 @@ class _HomeState extends State<Home> {
       currentIndex = index;
     });
   }
+
+  final AuthService _auth = AuthService();
 
   @override
   Widget build(BuildContext context) {
@@ -55,9 +59,12 @@ class _HomeState extends State<Home> {
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
             ),
             SizedBox(height: 45),
-            Text(
-              'Logout',
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
+            TextButton(
+              child: Text('Logout',
+                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600)),
+              onPressed: () async {
+                await _auth.signOut();
+              },
             ),
             SizedBox(height: 45),
             Material(
