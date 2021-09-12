@@ -1,8 +1,7 @@
 import 'package:donna/screens/signupPage.dart';
-import 'package:donna/widgets/textField.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:donna/services/auth.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -14,9 +13,10 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   TextEditingController emailController = new TextEditingController();
   TextEditingController passwordController = new TextEditingController();
-
   @override
   Widget build(BuildContext context) {
+    final AuthService _auth = AuthService();
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Login'),
@@ -55,18 +55,9 @@ class _LoginPageState extends State<LoginPage> {
             const SizedBox(height: 48),
             ElevatedButton(
                 onPressed: () async {
-                  try {
-                    UserCredential userCredential = await FirebaseAuth.instance
-                        .signInWithEmailAndPassword(
-                            email: "", password: "SuperSecretPassword!");
-                  } on FirebaseAuthException catch (e) {
-                    if (e.code == 'user-not-found') {
-                      print('No user found for that email.');
-                    } else if (e.code == 'wrong-password') {
-                      print('Wrong password provided for that user.');
-                    }
-                  }
-                },
+                  dynamic res = await _auth.login(emailController.text, passwordController.text);
+                  Navigator.pop(context);
+                  },
                 child: Text("login")),
             const SizedBox(height: 12),
             TextButton(

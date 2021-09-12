@@ -1,3 +1,4 @@
+import 'package:donna/screens/loginPage.dart';
 import 'package:flutter/material.dart';
 import 'package:donna/services/auth.dart';
 
@@ -96,9 +97,9 @@ class _SignupPageState extends State<SignupPage> {
                     TextButton(
                         onPressed: () {
                           Navigator.push(context,
-                              MaterialPageRoute(builder: (_) => SignupPage()));
+                              MaterialPageRoute(builder: (_) => LoginPage()));
                         },
-                        child: Text("create an account")),
+                        child: Text("already have an account")),
                     // Container(
                     //     height: 40.0,
                     //     child: Material(
