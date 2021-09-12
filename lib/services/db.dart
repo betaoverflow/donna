@@ -26,13 +26,13 @@ class FireStoreService {
   }
 
 
-  Future<void> addUsers(String category, String title, String text) async {
-    DocumentSnapshot snapshot = await users.doc(user?.uid).get();
-    return users
-        .doc(user?.uid)
-        .update()
-        .then((value) => print("User Updated"))
-        .catchError((error) => print("Failed to update user: $error"));
-  }
+  // Future<void> addUsers(String category, String title, String text) async {
+  //   // DocumentSnapshot snapshot = await users.doc(user?.uid).get();
+  //   return users
+  //       .doc(user?.uid)
+  //       .update()
+  //       .then((value) => print("User Updated"))
+  //       .catchError((error) => print("Failed to update user: $error"));
+  // }
 
 }

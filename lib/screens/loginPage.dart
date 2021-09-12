@@ -79,6 +79,7 @@ class _LoginPageState extends State<LoginPage> {
                 dynamic res = await _auth.login(
                     emailController.text, passwordController.text);
                 Navigator.pop(context);
+                Navigator.pop(context);
               },
               child: Container(
                   height: 40.0,
