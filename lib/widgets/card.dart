@@ -5,12 +5,13 @@ import 'package:flutter_tts/flutter_tts.dart';
 
 class VoiceCard extends StatelessWidget {
   final FlutterTts flutterTts = FlutterTts();
-  final imageUrl, subtitle, content;
+  final imageUrl, subtitle, content, category;
   VoiceCard(
       {Key? key,
       this.content = "Hi",
       this.imageUrl = "assets/cardbg.png",
-      this.subtitle = "Bring me water"})
+      this.subtitle = "Bring me water",
+      this.category = "General"})
       : super(key: key);
   @override
   Widget build(BuildContext context) {

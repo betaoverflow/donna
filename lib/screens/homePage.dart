@@ -79,7 +79,7 @@ class _HomePageState extends State<HomePage>
                   itemBuilder: (context, index) {
                     return VoiceCard(
                       subtitle: cardContent[index].title,
-                      content: cardContent[index].category,
+                      content: cardContent[index].content,
                     );
                   },
                   padding: EdgeInsets.symmetric(horizontal: 25),
