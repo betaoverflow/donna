@@ -42,6 +42,7 @@ Your appreciation makes us grow and glow up. ⭐
 
 
 ## Challenges we ran into 🥺
+We faced numerous challenges throughout the journey. Firstly, being a group of javascript developers this was our first try at Flutter. We faced a lot of issues setting up the environment and going through the docs to learn the basics of Flutter within two days.  Moreover, us being super ambitious decided to try Go and Redis for the backend and database part and were stuck in it for a long time as we had never worked on them. Then finally we decided to change our platform and use MongoDB and Firebase along with Flutter. Apart from that, we had to look for a good text to speech conversion model. We checked so many GitHub repositories and packages but we couldn't find one that had very high efficiency. So we finally decided to go with the flutter_tts package. Lastly, due to the time constraints, there were some features initially planned which we were not able to complete but would surely work on it after the hackathon.
 
 ## Accomplishments that we're proud of 😎
 
