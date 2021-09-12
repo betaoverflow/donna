@@ -75,27 +75,10 @@ class _OnboardingState extends State<Onboarding> {
           ),
         ),
         Container(
-          margin: EdgeInsets.all(40),
+          margin: EdgeInsets.all(50),
           width: double.infinity,
-          color: Colors.green,
-          child: TextButton(
-            child: Container(
-              child: Material(
-                borderRadius: BorderRadius.circular(20.0),
-                shadowColor: Colors.greenAccent,
-                color: Colors.green,
-                elevation: 7.0,
-                child: Text(
-                  currentIndex == onboardingContent.length - 1
-                      ? 'Done'
-                      : 'Next',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16),
-                ),
-              ),
-            ),
+          height: (50),
+          child: ElevatedButton(
             onPressed: () {
               if (currentIndex == onboardingContent.length - 1) {
                 Navigator.push(
@@ -107,8 +90,21 @@ class _OnboardingState extends State<Onboarding> {
                   duration: Duration(milliseconds: 100),
                   curve: Curves.bounceIn);
             },
+            style: (ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.green),
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20.0),
+                )))),
+            child: Text(
+              currentIndex == onboardingContent.length - 1 ? 'Done' : 'Next',
+              style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16),
+            ),
           ),
-        )
+        ),
       ],
     ));
   }
