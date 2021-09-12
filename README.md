@@ -1,4 +1,4 @@
-<p align='center'><img src='https://github.com/betaoverflow/donna/blob/main/assets/Logo.png' width="200" ></p>
+<p align='center'><img src='https://res.cloudinary.com/dguy8qpzi/image/upload/v1631426500/donna/Rectangle_39_pr6b6l.png' width="200" ></p>
 
 <h1 align='center'> Donna</h1>
 <p align='center'>
