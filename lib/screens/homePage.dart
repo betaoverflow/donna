@@ -43,6 +43,18 @@ class _HomePageState extends State<HomePage>
     _tabController.dispose();
   }
 
+  List<CardModel> filterCards(CategoryModel category, List<CardModel> cards) {
+    List<CardModel> newList = [];
+
+    for (var i = 0; i < cards.length; i++) {
+      if (cards[i].category == category.name) {
+        newList.add(cards[i]);
+      }
+    }
+
+    return newList;
+  }
+
   Widget build(BuildContext context) {
     return NestedScrollView(
         controller: _scrollController,
@@ -74,12 +86,13 @@ class _HomePageState extends State<HomePage>
           child: TabBarView(
               controller: _tabController,
               children: List.generate(categories.length, (index) {
+                List<CardModel> newList = filterCards(categories[index], cardContent);
                 return ListView.builder(
-                  itemCount: cardContent.length,
+                  itemCount: newList.length,
                   itemBuilder: (context, index) {
                     return VoiceCard(
-                      subtitle: cardContent[index].title,
-                      content: cardContent[index].category,
+                      subtitle: newList[index].title,
+                      content: newList[index].content,
                     );
                   },
                   padding: EdgeInsets.symmetric(horizontal: 25),
