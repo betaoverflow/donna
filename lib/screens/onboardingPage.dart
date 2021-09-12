@@ -50,6 +50,7 @@ class _OnboardingState extends State<Onboarding> {
                         Image.network(
                           onboardingContent[i].image,
                           height: 400,
+                          width: 300,
                         ),
                         Text(
                           onboardingContent[i].title,

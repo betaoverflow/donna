@@ -23,5 +23,5 @@ List<OnboardingModel> onboardingContent = [
       image:
           'https://res.cloudinary.com/dguy8qpzi/image/upload/v1631444144/make-your-own-removebg-preview_eefoag.png',
       descp:
-          "Personalize Donna to fit your needs. Add your most used phrases and contact people you might need in distress."),
+          "Personalize Donna to fit your needs. Add your most used phrases and contact people you might need in distress"),
 ];
