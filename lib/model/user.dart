@@ -4,6 +4,7 @@ class User {
   final String email;
   final String mobile;
   final String about;
+  final String address;
   final bool isDarkMode;
 
   const User({
@@ -12,6 +13,7 @@ class User {
     required this.email,
     required this.mobile,
     required this.about,
+    required this.address,
     required this.isDarkMode,
   });
 }
