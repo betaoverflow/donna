@@ -8,15 +8,13 @@ class FireStoreService {
 
   FireStoreService({required this.user});
 
-  Future<void> addUser(String nickName, String age) {
+  Future<void> addUser() {
     // Call the user's CollectionReference to add a new user
-    print(user?.uid);
 
     return users
         .doc(user?.uid)
         .set({
-      'nick_name': nickName, // John Doe
-      'age': age, // 42
+      'commands': [],
     })
         .then((value) => print("User Added"))
         .catchError((error) => print("Failed to add user: $error"));

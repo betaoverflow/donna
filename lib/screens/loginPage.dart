@@ -115,8 +115,7 @@ class _LoginPageState extends State<LoginPage> {
                 InkWell(
                   child: TextButton(
                     onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (_) => SignupPage()));
+                      Navigator.pop(context);
                     },
                     child: Text('Register',
                         style: TextStyle(

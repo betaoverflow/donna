@@ -1,6 +1,10 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:donna/model/UserAuth.dart';
 import 'package:donna/screens/loginPage.dart';
+import 'package:donna/services/db.dart';
 import 'package:flutter/material.dart';
 import 'package:donna/services/auth.dart';
+import 'package:provider/provider.dart';
 
 class SignupPage extends StatefulWidget {
   @override
@@ -14,6 +18,8 @@ class _SignupPageState extends State<SignupPage> {
   @override
   Widget build(BuildContext context) {
     final AuthService _auth = AuthService();
+    CollectionReference users = FirebaseFirestore.instance.collection('users');
+
     return new Scaffold(
         body: SingleChildScrollView(
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: <
@@ -86,10 +92,13 @@ class _SignupPageState extends State<SignupPage> {
                 SizedBox(height: 50.0),
                 TextButton(
                   onPressed: () async {
-                    dynamic result = await _auth.register(
+                    dynamic res = await _auth.register(
                         emailController.text, passwordController.text);
-                    print(emailController.text);
-                    print(passwordController.text);
+                    print(res.uid);
+                    await users.doc(res.uid).set({
+                      'commands': [],
+                    });
+                    Navigator.pop(context);
                   },
                   child: Container(
                       height: 40.0,
