@@ -5,7 +5,7 @@ import 'package:bubble_bottom_bar/bubble_bottom_bar.dart';
 
 // importing screens
 import 'package:donna/screens/homePage.dart';
-import 'package:donna/screens/formpage.dart';
+import 'package:donna/screens/formPage.dart';
 import 'package:donna/screens/profilePage.dart';
 import 'package:donna/services/auth.dart';
 
@@ -24,6 +24,7 @@ class _HomeState extends State<Home> {
       currentIndex = index;
     });
   }
+
   final AuthService _auth = AuthService();
 
   @override
